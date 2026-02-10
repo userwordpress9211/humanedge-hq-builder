@@ -12,7 +12,7 @@
   transition: filter 300ms;
 }
 
-img.transition-all.duration-300.header-logo {
+.header-logo {
     width: 100px;
 }
 
