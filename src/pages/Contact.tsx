@@ -38,64 +38,16 @@ const Contact = () => {
     message: "",
   });
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-<<<<<<< HEAD
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-
-  try {
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbwL3N3aThsBhwIjk3XMH6OzqyEJZdBiKrPmsS7u2ibfCE_hRrlEh6a9bPQBdPAvFWTFPw/exec",
-      {
-        method: "POST",
-        mode: "no-cors", // ✅ REQUIRED
-        body: JSON.stringify(formData),
-      }
-    );
-
-    alert("Form submitted successfully!");
-=======
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
-    });
->>>>>>> 093ae47c46caf2fefcaada199734ffc21b9f5238
-
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      message: "",
-    });
-<<<<<<< HEAD
-  } catch (error) {
-    alert("Error submitting form");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
-
-=======
-    setIsSubmitting(false);
-  };
->>>>>>> 093ae47c46caf2fefcaada199734ffc21b9f5238
 
   return (
     <Layout>
