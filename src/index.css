@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HumanEdge Business Solutions Design System
+   Brand: Professional, Trustworthy, People-Centric
+   Colors: Deep blues, teals, clean grays - corporate HR consultancy feel
+*/
+
+@layer base {
+  :root {
+    /* Core backgrounds */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 17%;
+
+    /* Cards and elevated surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 17%;
+
+    /* Popovers and dropdowns */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
+
+    /* Primary - Deep Navy Blue (Trust & Authority) */
+    --primary: 213 50% 23%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary - Light blue-gray */
+    --secondary: 210 25% 95%;
+    --secondary-foreground: 213 50% 23%;
+
+    /* Muted surfaces */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Teal Blue (Modern & Approachable) */
+    --accent: 192 91% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders and inputs */
+    --border: 214 20% 89%;
+    --input: 214 20% 89%;
+    --ring: 192 91% 36%;
+
+    --radius: 0.625rem;
+
+    /* Custom brand colors */
+    --navy: 213 50% 23%;
+    --navy-dark: 213 55% 15%;
+    --navy-light: 213 45% 35%;
+    --teal: 192 91% 36%;
+    --teal-light: 192 80% 45%;
+    --teal-dark: 192 95% 28%;
+    --slate: 215 20% 65%;
+    --slate-light: 210 20% 93%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(213 50% 23%) 0%, hsl(213 55% 15%) 50%, hsl(192 60% 25%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(192 91% 36%) 0%, hsl(192 80% 45%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(210 25% 95%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 17% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 17% / 0.08), 0 2px 4px -2px hsl(215 25% 17% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 17% / 0.1), 0 4px 6px -4px hsl(215 25% 17% / 0.08);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 17% / 0.1), 0 8px 10px -6px hsl(215 25% 17% / 0.08);
+    --shadow-card: 0 4px 20px -4px hsl(213 50% 23% / 0.12);
+    --shadow-button: 0 4px 14px -3px hsl(192 91% 36% / 0.4);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 215 25% 27%;
+    --sidebar-primary: 213 50% 23%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 25% 95%;
+    --sidebar-accent-foreground: 213 50% 23%;
+    --sidebar-border: 214 20% 89%;
+    --sidebar-ring: 192 91% 36%;
+  }
+
+  .dark {
+    --background: 215 30% 9%;
+    --foreground: 210 40% 96%;
+
+    --card: 215 28% 12%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 215 28% 12%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 192 80% 50%;
+    --primary-foreground: 215 30% 9%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 192 80% 45%;
+    --accent-foreground: 215 30% 9%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 192 80% 50%;
+
+    --navy: 210 40% 96%;
+    --navy-dark: 210 35% 90%;
+    --navy-light: 210 30% 80%;
+    --teal: 192 80% 50%;
+    --teal-light: 192 75% 60%;
+    --teal-dark: 192 85% 40%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(215 30% 9%) 0%, hsl(215 35% 6%) 50%, hsl(192 40% 15%) 100%);
+
+    --sidebar-background: 215 28% 12%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 192 80% 50%;
+    --sidebar-primary-foreground: 215 30% 9%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 192 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-navy tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero gradient background */
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Accent gradient */
+  .bg-accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  /* Subtle section background */
+  .bg-subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+
+  /* Card with brand shadow */
+  .card-elevated {
+    @apply bg-card rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Section container */
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .header-logo{
+    width: 120px;
+    height: auto;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Glass effect for floating elements */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  /* Animated underline on hover */
+  .hover-underline {
+    @apply relative;
+  }
+  
+  .hover-underline::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+    content: '';
+  }
+  
+  .hover-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  /* Focus ring style */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+}
