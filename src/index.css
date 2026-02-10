@@ -176,10 +176,13 @@
   .section-container {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
+<<<<<<< HEAD
   .header-logo{
     width: 120px;
     height: auto;
   }
+=======
+>>>>>>> 093ae47c46caf2fefcaada199734ffc21b9f5238
 
   /* Section spacing */
   .section-padding {

@@ -43,6 +43,7 @@ const Contact = () => {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+<<<<<<< HEAD
   
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
@@ -59,6 +60,20 @@ const Contact = () => {
     );
 
     alert("Form submitted successfully!");
+=======
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+    });
+>>>>>>> 093ae47c46caf2fefcaada199734ffc21b9f5238
 
     setFormData({
       name: "",
@@ -68,6 +83,7 @@ const Contact = () => {
       service: "",
       message: "",
     });
+<<<<<<< HEAD
   } catch (error) {
     alert("Error submitting form");
   } finally {
@@ -76,6 +92,10 @@ const Contact = () => {
 };
 
 
+=======
+    setIsSubmitting(false);
+  };
+>>>>>>> 093ae47c46caf2fefcaada199734ffc21b9f5238
 
   return (
     <Layout>

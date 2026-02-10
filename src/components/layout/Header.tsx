@@ -57,6 +57,7 @@ export function Header() {
       <div className="section-container">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
+<<<<<<< HEAD
          <Link to="/" className="flex items-center">
             <img
               src={
@@ -74,6 +75,23 @@ export function Header() {
 
 
 
+=======
+          <Link to="/" className="flex items-center gap-2">
+            <div className="flex flex-col">
+              <span className={`text-xl font-bold tracking-tight transition-colors ${
+                isScrolled ? "text-navy" : "text-primary-foreground"
+              }`}>
+                HumanEdge
+              </span>
+              <span className={`text-xs font-medium tracking-wider uppercase transition-colors ${
+                isScrolled ? "text-accent" : "text-accent"
+              }`}>
+                Business Solutions
+              </span>
+            </div>
+          </Link>
+
+>>>>>>> 093ae47c46caf2fefcaada199734ffc21b9f5238
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navigation.map((item) =>
