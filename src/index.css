@@ -215,6 +215,30 @@
   }
 }
 
+   @layer components {
+  /* Hero gradient background */
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Section container */
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ✅ ADD LOGO CLASS HERE */
+  .header-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+
 @layer utilities {
   /* Smooth transitions */
   .transition-smooth {
