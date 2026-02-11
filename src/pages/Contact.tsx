@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import emailjs from "@emailjs/browser";
+
 import {
   Select,
   SelectContent,
@@ -38,10 +40,44 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      "service_noauqg3",        // 🔁 replace
+      "template_hmgufg1",       // 🔁 replace
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        service: formData.service,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      },
+      "IVTFWEeQlnQREDPF8"         // 🔁 replace
+    );
+
+    alert("Message sent successfully!");
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      service: "",
+      message: "",
+    });
+
+  } catch (error) {
+    alert("Failed to send message. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

@@ -20,12 +20,13 @@ const services = [
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  
   { name: "Services", href: "/services", dropdown: services },
   { name: "Why HumanEdge", href: "/why-humanedge" },
   { name: "Industries", href: "/industries" },
   { name: "Resources", href: "/resources" },
-  { name: "Contact", href: "/contact" },
+  { name: "About Us", href: "/about" },
+  // { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -127,7 +128,7 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
+            {/* <a
               href="tel:+917350797442"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                 isScrolled
@@ -137,7 +138,7 @@ export function Header() {
             >
               <Phone className="h-4 w-4" />
               <span className="hidden xl:inline">+91-7350797442</span>
-            </a>
+            </a> */}
             <Button
               variant={isScrolled ? "accent" : "hero"}
               size="sm"
