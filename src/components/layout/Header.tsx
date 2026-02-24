@@ -55,6 +55,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
+      
       <div className="section-container">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
