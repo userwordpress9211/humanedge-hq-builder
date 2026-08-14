@@ -34,7 +34,7 @@ export function HeroSection() {
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8 animate-fade-in">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse-soft" />
               <span className="text-sm font-medium text-primary-foreground/90">
-                People. Process. Performance.
+                On-Demand HR Services
               </span>
             </div>
 
@@ -143,7 +143,7 @@ export function HeroSection() {
           className="w-full h-auto"
         >
           <path
-            d="M0 50L48 45.8C96 41.7 192 33.3 288 35.8C384 38.3 480 51.7 576 54.2C672 56.7 768 48.3 864 43.3C960 38.3 1056 36.7 1152 40.8C1248 45 1344 55 1392 60L1440 65V100H1392C1344 100 1248 100 1152 100C1056 100 960 100 864 100C768 100 672 100 576 100C480 100 384 100 288 100C192 100 96 100 48 100H0V50Z"
+            d="M0 50L48 45.8C96 41.7 192 33.3 288 35.8C384 38.3 480 51.7 576 54.2C672 56.7 768 48.3 864 43.3C960 38.3 1056 36.7 1152 40.8C1248 45 1344 55 1392 60L1440 65V100H1392C1344 100 1248 100 1152 100C1056 100 960 100 864 100C768 100 672 100 576 100C480 100 384 100 288 100C192 100 96 100 48 100H0Z"
             className="fill-background"
           />
         </svg>
