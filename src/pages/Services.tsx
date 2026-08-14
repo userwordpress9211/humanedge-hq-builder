@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, ClipboardCheck, Headphones, FileText, Calculator, TrendingUp, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ClipboardCheck, FileText, Calculator, TrendingUp, CheckCircle2 } from "lucide-react";
 
 const services = [
   {
@@ -18,21 +18,6 @@ const services = [
       "Risk heat map & action plan",
     ],
     href: "/services/hr-audit",
-  },
-  {
-    id: "hr-on-demand",
-    icon: Headphones,
-    title: "HR On-Demand Services",
-    description: "Expert HR support without the cost of a full-time HR department. Available when you need it.",
-    highlight: "Flexible Support Model",
-    deliverables: [
-      "Employee lifecycle management",
-      "HR operations & day-to-day support",
-      "Manager & leadership advisory",
-      "Employee relations support",
-      "Recruitment assistance",
-    ],
-    href: "/services/hr-on-demand",
   },
   {
     id: "hr-policies",
@@ -90,7 +75,7 @@ const Services = () => {
           <div className="max-w-3xl">
             <p className="text-accent font-semibold mb-4">Our Services</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Comprehensive HR Solutions
+              On-Demand HR Services
             </h1>
             <p className="text-xl text-primary-foreground/80">
               From compliance audits to talent management, we provide end-to-end HR solutions tailored to your organization's needs.
